@@ -2,5 +2,5 @@ size = int(input("Enter the size of the pattern:"))
 counter = size
 
 while counter > 0:    
-    print("*"*size, end="\n")
+    print("*"*size, end="")
     counter = counter - 1
