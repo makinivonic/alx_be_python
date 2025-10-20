@@ -19,3 +19,5 @@ elif metric == "F":
     print(f"{temperature}°F is {result}°C")
 else:
     print("Invalid temperature metric was provided.")
+
+# Invalid temperature. Please enter a numeric value.
