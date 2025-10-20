@@ -17,7 +17,7 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            items = input("Please enter an item(s), seperated by commas: ")
+            items = input("Enter the item to add: ")
             items = [item.strip().title() for item in items.split(",")]
             shopping_list.extend(items)
             print(f"{', '.join(items)} added!")
