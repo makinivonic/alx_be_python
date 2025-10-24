@@ -23,6 +23,6 @@ class BankAccount:
             raise Exception(f"An Error has occurred. {e}")
     
     def display_balance(self):
-        print("Current Balance: ", self.account_balance)
+        print("Current Balance: $", float(self.account_balance))
 
       
