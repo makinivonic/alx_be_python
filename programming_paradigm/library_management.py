@@ -15,15 +15,15 @@ class Book:
     
 class Library:
     def __init__(self):
-        self.__books = []
+        self._books = []
     
     def add_book(self, book : Book):
-        self.__books.append(book)
+        self._books.append(book)
         print(f"Available books after setup:")
         self.list_available_books()
     
     def check_out_book(self, title):       
-        for book in self.__books:
+        for book in self._books:
             if book.title.lower() == title.lower() and book.is_available():
                 book.check_out()
                 print(f"Available books after checking out '{title}':")
@@ -32,7 +32,7 @@ class Library:
         print(f"Book: {title} not found.")
     
     def return_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title.lower() == title.lower() and not book.is_available():
                 book.return_book()
                 print(f"Available books after returning '{title}':")
@@ -41,10 +41,10 @@ class Library:
         print(f"Book: {title} not found")
     
     def list_available_books(self):
-       if len(self.__books) == 0:
+       if len(self._books) == 0:
            print("No books available at the moment.")
            return
-       for book in self.__books:
+       for book in self._books:
            if book.is_available():
                print(f"{book.title} by {book.author}")
            
